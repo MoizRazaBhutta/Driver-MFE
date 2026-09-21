@@ -1,8 +1,4 @@
 import { Routes } from '@angular/router';
 import { DriverBadge } from './components/driver-badge/driver-badge';
 
-export const routes: Routes = [
-  { path: 'drivers', component: DriverBadge },
-  { path: '', redirectTo: 'drivers', pathMatch: 'full' },
-  { path: '**', redirectTo: 'drivers' },
-];
+export const routes: Routes = [{ path: '/', component: DriverBadge }];

@@ -7,8 +7,18 @@ import { NgZone } from '@angular/core';
 
 const lifecycles = singleSpaAngular({
   bootstrapFunction: () => bootstrapApplication(App, appConfig),
-  template: '<app-root></app-root>',
+  template: '<app-mfe-driver></app-mfe-driver>',
   NgZone,
+  // Tell Single-SPA explicitly to mount inside the Shell's target div
+  domElementGetter: () => {
+    const el = document.getElementById('single-spa-application:@hub/mfe-driver');
+    if (!el) {
+      throw new Error(
+        'Target container #single-spa-application:@hub/mfe-driver not found in Shell!',
+      );
+    }
+    return el;
+  },
 });
 
 export const bootstrap = lifecycles.bootstrap;

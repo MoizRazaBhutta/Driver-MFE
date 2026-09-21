@@ -4,7 +4,7 @@ import { DriverBadge } from './components/driver-badge/driver-badge';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-mfe-driver',
   imports: [CommonModule, DriverBadge, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
