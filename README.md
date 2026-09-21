@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Steps to creating a MFE
+
+1. Ng Add single spa so angular uses it
+2. Create main.single-spa.ts file to locate the root app for bootstrapping and exposing 3 methods bootstrap, mount and unmount so this app is treated as a wrapper for single spa.
+3. Then we can expose a component using parcel so single spa exposes same methods so it can be mounted and unmounted to any other mfe instead of whole application
+4. 

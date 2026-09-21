@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "browser": "src/main.single-spa.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -59,6 +59,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "port": 4201
+          },
           "configurations": {
             "production": {
               "buildTarget": "mfe-driver:build:production"
