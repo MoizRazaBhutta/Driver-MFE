@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { DriverBadge } from './components/driver-badge/driver-badge';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-mfe-driver',
-  imports: [CommonModule, DriverBadge, RouterOutlet],
+  imports: [CommonModule, DriverBadge],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
